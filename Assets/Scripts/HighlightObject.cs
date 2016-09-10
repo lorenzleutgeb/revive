@@ -24,7 +24,7 @@ public class HighlightObject : MonoBehaviour {
     {
         if (isLerping && !isAborted)
         {
-            timeStartedLerping += Time.deltaTime * speed;
+            timeStartedLerping += Time.deltaTime*3*0.15*(1-timeStartedLerping^2)*timeStartedLerping+3*0.75*(1-timeStartedLerping)*timeStartedLerping^2+1*timeStartedLerping^3* speed;
 
             this.transform.localPosition = Vector3.Lerp(startPosition, endPosition, timeStartedLerping);
 
