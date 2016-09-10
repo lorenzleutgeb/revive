@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692504, g: 0.4967869, b: 0.57508504, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -221,7 +221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44ea350479623745998c6eac1c0bf32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Direction: {x: -0.02, y: 0, z: 0.02}
+  endPosition: {x: 0, y: 0, z: 0}
+  speed: 1
 --- !u!1001 &243641436
 Prefab:
   m_ObjectHideFlags: 0
@@ -231,15 +232,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 402774, guid: b84b73491ac53a34095000876132a211, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 402774, guid: b84b73491ac53a34095000876132a211, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 402774, guid: b84b73491ac53a34095000876132a211, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 7
+      value: 6.78
       objectReference: {fileID: 0}
     - target: {fileID: 402774, guid: b84b73491ac53a34095000876132a211, type: 2}
       propertyPath: m_LocalRotation.x
@@ -445,7 +446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44ea350479623745998c6eac1c0bf32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Direction: {x: -0.02, y: 0, z: -0.02}
+  endPosition: {x: 0, y: 0, z: 0}
+  speed: 1
 --- !u!1 &303671445
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +633,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44ea350479623745998c6eac1c0bf32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Direction: {x: -0.02, y: 0, z: -0.02}
+  endPosition: {x: -0.02, y: 0, z: -0.02}
+  speed: 1
 --- !u!64 &631941993
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -761,7 +764,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44ea350479623745998c6eac1c0bf32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Direction: {x: -0.02, y: 0, z: 0.02}
+  endPosition: {x: 0, y: 0, z: 0}
+  speed: 1
 --- !u!1 &704903628
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,7 +947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44ea350479623745998c6eac1c0bf32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Direction: {x: -0.02, y: 0, z: -0.02}
+  endPosition: {x: -0.02, y: 0, z: -0.02}
+  speed: 1
 --- !u!1 &1650989955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,7 +1005,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44ea350479623745998c6eac1c0bf32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Direction: {x: -0.02, y: 0, z: 0.02}
+  endPosition: {x: 0, y: 0, z: 0}
+  speed: 1
 --- !u!1001 &1872614463
 Prefab:
   m_ObjectHideFlags: 0
