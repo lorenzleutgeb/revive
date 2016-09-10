@@ -11,6 +11,7 @@ public class HighlightObject : MonoBehaviour {
 
     private float timeStartedLerping;
     private bool isLerping;
+    private bool isAborted;
 
 	// Use this for initialization
 	void Start ()
@@ -21,7 +22,7 @@ public class HighlightObject : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (isLerping)
+        if (isLerping && !isAborted)
         {
             timeStartedLerping += Time.deltaTime * speed;
 
@@ -31,11 +32,15 @@ public class HighlightObject : MonoBehaviour {
             {
                 isLerping = false;
             }
+        } else if(isAborted)
+        {
+            startPosition = this.transform.localPosition = Vector3.zero;
         }
 	}
 
     void StartLerping()
     {
+        isAborted = false;
         isLerping = true;
         timeStartedLerping = 0;
     }
@@ -47,6 +52,7 @@ public class HighlightObject : MonoBehaviour {
 
     void OnGazeLeave()
     {
+        isAborted = true;
         this.transform.localPosition = Vector3.zero;
     }
 }
