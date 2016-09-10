@@ -703,7 +703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44ea350479623745998c6eac1c0bf32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPosition: {x: -0.02, y: 0, z: -0.02}
+  endPosition: {x: -0.05, y: 0, z: -0.05}
   speed: 1
 --- !u!64 &631941993
 MeshCollider:

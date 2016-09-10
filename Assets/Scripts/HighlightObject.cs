@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using HoloToolkit.Unity;
+using System;
 
 public class HighlightObject : MonoBehaviour {
 
@@ -12,6 +13,7 @@ public class HighlightObject : MonoBehaviour {
     private float timeStartedLerping;
     private bool isLerping;
     private bool isAborted;
+    private float frameCount;
 
 	// Use this for initialization
 	void Start ()
@@ -24,7 +26,8 @@ public class HighlightObject : MonoBehaviour {
     {
         if (isLerping && !isAborted)
         {
-            timeStartedLerping += Time.deltaTime*3*0.15*(1-timeStartedLerping^2)*timeStartedLerping+3*0.75*(1-timeStartedLerping)*timeStartedLerping^2+1*timeStartedLerping^3* speed;
+            frameCount += Time.deltaTime;
+            timeStartedLerping = (float)(Time.deltaTime * 3 * 0.15 * (1 - (float)Math.Pow(frameCount, 2)) * frameCount + 3 * 0.75 * (1 - frameCount) * Math.Pow(frameCount, 2) + 1 * Math.Pow(frameCount, 3) * speed);
 
             this.transform.localPosition = Vector3.Lerp(startPosition, endPosition, timeStartedLerping);
 
@@ -40,6 +43,7 @@ public class HighlightObject : MonoBehaviour {
 
     void StartLerping()
     {
+        frameCount = 0;
         isAborted = false;
         isLerping = true;
         timeStartedLerping = 0;
